@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* Styles pour le conteneur */
+.conteneur {
+    margin: 0 auto; /* Centrer le conteneur horizontalement */
+}
+
+/* Styles pour le contenu à centrer */
+header, section {
+    text-align: center; /* Centrer le contenu */
+    margin: 0 auto; /* Centrer horizontalement */
+    max-width: 800px; /* Largeur maximale du contenu */
+}
+
+/* Styles pour le nom "Pierre Gaillard" */
+h1.nom {
+    margin-top: 20px; /* Espacement entre le menu et le nom */
+}
+
+/* Styles pour l'image */
+img.photo {
+    display: block;
+    margin: 0 auto; /* Centrer l'image horizontalement */
+    max-width: 100%; /* Assurer que l'image ne dépasse pas la largeur de son conteneur */
+    border-radius: 50%; /* Rendre l'image arrondie en utilisant un rayon de 50% */
+}
+
+/* Styles pour le menu horizontal */
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    background-color: #809a9d; /* Couleur de fond du menu */
+    text-align: center; /* Centrer le contenu du menu */
+}
+
+ul.menu li {
+    display: inline;
+    margin-right: 20px; /* Espacement entre les éléments du menu */
+}
+
+ul.menu li:last-child {
+    margin-right: 0; /* Aucun espacement à droite pour le dernier élément */
+}
+
+ul.menu li a {
+    text-decoration: none;
+    color: white; /* Couleur du texte du menu */
+}
+/* Styles pour les éléments de la liste */
+ol li {
+    background-color: #f0f0f0; /* Couleur de fond des boîtes */
+    border: 1px solid #ddd; /* Bordure autour des boîtes */
+    padding: 20px; /* Espacement à l'intérieur des boîtes */
+    margin: 10px 0; /* Espacement entre les boîtes */
+    border-radius: 5px; /* Coins arrondis des boîtes */
+}
+
+/* Styles pour les titres des services */
+ol li h3 {
+    font-size: 24px; /* Taille de police pour les titres */
+    margin-top: 0; /* Supprimer la marge supérieure par défaut */
+    color: #333; /* Couleur du texte des titres */
+}
+
+/* Styles pour les descriptions des services */
+ol li p {
+    font-size: 16px; /* Taille de police pour les descriptions */
+    color: #666; /* Couleur du texte des descriptions */
+}
+/* Styles pour la liste ordonnée (supprimer les numéros) */
+ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+/* Styles pour la section "Pourquoi choisir Pierre Gaillard" */
+#pourquoi-choisir {
+    background-color: #809a9d; /* Couleur de fond de la section */
+    padding: 20px; /* Espacement à l'intérieur de la section */
+    text-align: center; /* Centrer le contenu du texte */
+    max-width: 762px; /* Largeur maximale de la section */
+    margin: 0 auto; /* Centrer la section horizontalement */
+    border-radius: 10px; /* Coins arrondis de la boîte */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Style pour le titre "Pourquoi choisir Pierre Gaillard" */
+#pourquoi-choisir h2 {
+    font-size: 24px; /* Taille de police du titre */
+    color: #fff; /* Couleur du texte du titre */
+}
+
+/* Styles pour la liste à puces */
+#pourquoi-choisir ul {
+    list-style-type: disc; /* Style des puces */
+    padding-left: 0; /* Supprimer le décalage à gauche */
+    text-align: left; /* Aligner le texte à gauche */
+    margin-top: 10px; /* Espacement en haut de la liste */
+}
+
+/* Styles pour les éléments de la liste */
+#pourquoi-choisir li {
+    font-size: 16px; /* Taille de police des éléments */
+    color: #fff; /* Couleur du texte des éléments */
+    margin: 8px 0; /* Espacement entre les éléments */
+}
+
