@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 /* Styles pour le conteneur */
 .conteneur {
     margin: 0 auto; /* Centrer le conteneur horizontalement */
@@ -49,6 +48,7 @@ ul.menu li a {
     text-decoration: none;
     color: white; /* Couleur du texte du menu */
 }
+
 /* Styles pour les éléments de la liste */
 ol li {
     background-color: #f0f0f0; /* Couleur de fond des boîtes */
@@ -70,11 +70,13 @@ ol li p {
     font-size: 16px; /* Taille de police pour les descriptions */
     color: #666; /* Couleur du texte des descriptions */
 }
+
 /* Styles pour la liste ordonnée (supprimer les numéros) */
 ol {
     list-style-type: none;
     padding-left: 0;
 }
+
 /* Styles pour la section "Pourquoi choisir Pierre Gaillard" */
 #pourquoi-choisir {
     background-color: #809a9d; /* Couleur de fond de la section */
@@ -106,4 +108,3 @@ ol {
     color: #fff; /* Couleur du texte des éléments */
     margin: 8px 0; /* Espacement entre les éléments */
 }
-

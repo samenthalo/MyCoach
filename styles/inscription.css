@@ -1,0 +1,243 @@
+body {
+    Font-family: Arial,Dejavu Sans, Arial, Verdana, sans-serif;
+   
+}
+
+/* Styles pour le conteneur */
+.conteneur {
+    margin: 0 auto; /* Centrer le conteneur horizontalement */
+}
+
+/* Styles pour le contenu à centrer */
+header, section {
+    text-align: center; /* Centrer le contenu */
+    margin: 0 auto; /* Centrer horizontalement */
+    max-width: 800px; /* Largeur maximale du contenu */
+}
+
+/* Styles pour le nom "Pierre Gaillard" */
+h1.nom {
+    margin-top: 20px; /* Espacement entre le menu et le nom */
+}
+
+/* Styles pour l'image */
+img.photo {
+    display: block;
+    margin: 0 auto; /* Centrer l'image horizontalement */
+    max-width: 100%; /* Assurer que l'image ne dépasse pas la largeur de son conteneur */
+    border-radius: 50%; /* Rendre l'image arrondie en utilisant un rayon de 50% */
+}
+
+/* Styles pour le menu horizontal */
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    background-color: #809a9d; /* Couleur de fond du menu */
+    text-align: center; /* Centrer le contenu du menu */
+}
+
+ul.menu li {
+    display: inline;
+    margin-right: 20px; /* Espacement entre les éléments du menu */
+}
+
+ul.menu li:last-child {
+    margin-right: 0; /* Aucun espacement à droite pour le dernier élément */
+}
+
+ul.menu li a {
+    text-decoration: none;
+    color: white; /* Couleur du texte du menu */
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #B0B0B0;
+  border: 1px solid #B0B0B0;
+  transition: .4s;
+  border-radius: 32px;
+  outline: none;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  outline: 2px solid #B0B0B0;
+  left: -1px;
+  bottom: -1px;
+  background-color: #fff;
+  transition: transform .25s ease-in-out 0s;
+}
+
+.slider-icon {
+  opacity: 0;
+  height: 12px;
+  width: 12px;
+  stroke-width: 8;
+  position: absolute;
+  z-index: 999;
+  stroke: #222222;
+  right: 60%;
+  top: 30%;
+  transition: right ease-in-out .3s, opacity ease-in-out .15s;
+}
+.slider-text {
+  position: absolute;
+  top: 50%;
+  right: -205px;
+  transform: translateY(-50%);
+  text-align: right;
+  color: #fff;
+}
+
+input:checked + .slider {
+  background-color: #222222;
+}
+
+input:checked + .slider .slider-icon {
+  opacity: 1;
+  right: 20%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.5em);
+  outline-color: #181818;
+}
+.bandeau {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  text-align: center;
+}
+
+.form-box {
+  width: 400px; /* Largeur accrue */
+  height: 500px; /* Hauteur accrue */
+  background: rgba(17, 24, 39, 1);
+  overflow: hidden;
+  border-radius: 16px;
+  color: #fff;
+  position: absolute;
+  top: 52%; /* Ajustez cette valeur pour déplacer la boîte verticalement */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 2rem; /* Ajustez la marge supérieure selon vos besoins */
+}
+
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
+}
+
+/*Form text*/
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+/*Inputs box*/
+.form-container {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 1rem 0 .5rem;
+  width: 100%;
+}
+
+.input {
+  background: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font-size: .9rem;
+  padding: 8px 15px;
+  
+}
+
+.form-section {
+  padding: 16px;
+  font-size: .85rem;
+  box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #fff;
+  transition: color .3s ease;
+}
+
+.form-section a:hover {
+  color: #005ce6;
+  text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+  background-color: #809a9d;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+/* Pour les écrans de taille supérieure à 478px */
+@media (min-width: 479px) {
+  .form-box {
+    width: 100%;
+    max-width: 445px;
+    left: 50%;
+
+  }
+}
+
+/* Pour les écrans de taille maximale de 478px */
+@media (max-width: 478px) {
+  .form-box {
+    width: 90%;
+    max-width: none;
+    left: 50%;
+
+  }
+}
