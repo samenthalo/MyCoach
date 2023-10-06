@@ -1,4 +1,10 @@
 <?php include('includes/connexion.php');
+session_start();
+if (!isset($_SESSION['connecte'])) {
+    // L'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
+    header('Location: accueil.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,10 +22,20 @@
             <h1 class="nom">Pierre Gaillard</h1>
             <img class="photo" src="pierre_gaillard.jpg" width="100px" height="120px" alt="Photo de Pierre Gaillard">
             <!--ajouter d'autres liens du menu ici -->
-            <li><a href="accueil.html">Accueil</a></li>
-            <li><a href="seances.html">Séances</a></li>
-            <li><a href="inscriptionhtml.php">Inscription</a></li>
-            <li><a href="connexionhtml.php">Connexion</a></li>
+            <li><a href="accueil.php">Accueil</a></li>
+            <?php
+        // Vérifie si la variable de session 'connecte' est définie et égale à true
+            if (isset($_SESSION['connecte']) && $_SESSION['connecte'] === true) {
+                // Si la condition est vraie, cela signifie que l'utilisateur est connecté.
+
+                // Affiche un lien vers la page "seances.php" pour accéder aux séances
+                echo '<li><a href="seances.php">Séances</a></li>';
+
+                // Affiche un lien vers la page "includes/deconnexion.php" pour se déconnecter
+                echo '<li><a href="includes/deconnexion.php">Déconnexion</a></li>';
+            }
+            ?>
+
         </ul>
     </div>
     <header>
@@ -32,15 +48,18 @@
             //requête SQL pour extraire les données de la base de données
             $seance = "SELECT jour, horaire, sport, niveau, nom, adresse, cp, ville
             FROM seances, sports, niveau, salle
-            WHERE sports.id=seances.id_sport AND niveau.id=seances.id_niveau AND salle.id=seances.id_salle";
+            WHERE sports.id=seances.id_sport AND niveau.id=seances.id_niveau AND salle.id=seances.id_salle
+            ";
             // Exécute la requête SQL et stocke les résultats dans la variable $resultatseance
             $resultatseance = $connexion->query($seance);
+
 
 
         } catch (PDOException $e) {
         // En cas d'erreur de la base de données.
             echo "Erreur de la base de données. ";
         }
+
 
         while ($seanceRow = $resultatseance->fetch()) {
             //nouvel élément de liste ordonnée (pour chaque résultat de la requête)

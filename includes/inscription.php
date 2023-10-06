@@ -21,13 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($count > 0) {
             // L'utilisateur existe déjà avec cette adresse e-mail
-            echo '<div style="background-color: #f8d7da;color: #721c24;padding: 10px;text-align: center;">Vous avez déjà un compte. Veuillez vous connexionecter.</div>';
+            echo '<div style="background-color: #f8d7da;color: #721c24;padding: 10px;text-align: center;">Vous avez déjà un compte. Veuillez vous connecter.</div>';
         } else {
             // Hashage du mot de passe
             $hashedPassword = password_hash($mdp, PASSWORD_DEFAULT);
-
-            // Génération de l'identifiant en minuscules
-            $identifiant = strtolower($nom) . strtolower($prenom);
 
             // Requête d'insertion
             $sql = "INSERT INTO utilisateur (nom, prenom, mail, mdp) 
@@ -47,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute();
 
             // Si l'insertion s'est bien passée, vous pouvez afficher un message de succès
-            echo '<div style="background-color: #d4edda;color: #155724;padding: 10px;text-align: center;">Inscription réussie ! Vous pouvez vous connexionecter maintenant.</div>';
+            echo '<div style="background-color: #d4edda;color: #155724;padding: 10px;text-align: center;">Inscription réussie ! Vous pouvez vous connecter maintenant.</div>';
         }
     } catch (PDOException $e) {
         // En cas d'erreur lors de l'exécution des requêtes SQL

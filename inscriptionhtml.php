@@ -13,7 +13,7 @@
         <ul class="menu">
             <h1 class="nom">Pierre Gaillard</h1>
             <img class="photo" src="pierre_gaillard.jpg" width="100px" height="120px" alt="Photo de Pierre Gaillard">
-            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="accueil.php">Accueil</a></li>
             <li><a href="connexionhtml.php">Connexion</a></li>
 
         </ul>

@@ -34,8 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Vous pouvez accéder aux valeurs de l'utilisateur
             $_SESSION['nom'] = $user['nom']; // Stockage du nom dans la variable de session
             $_SESSION['prenom'] = $user['prenom']; // Stockage du prénom dans la variable de session
-
-            $_SESSION['connexionecte'] = true;
+            $_SESSION['connecte'] = true;
             header("Location: seances.php");
             exit;
         } else {
